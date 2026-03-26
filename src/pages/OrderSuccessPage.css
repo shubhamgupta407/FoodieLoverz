@@ -1,0 +1,104 @@
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff5f0 100%);
+}
+
+.success-card {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.success-anim { margin-bottom: 1.5rem; }
+
+.checkmark-circle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.checkmark-svg { width: 100%; height: 100%; }
+
+.checkmark-circle-bg {
+  stroke: var(--primary);
+  stroke-width: 2;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: strokeDash 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+  stroke: var(--primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: strokeDash 0.4s 0.5s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+@keyframes strokeDash {
+  to { stroke-dashoffset: 0; }
+}
+
+.success-card h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.success-sub {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.order-detail-card {
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.order-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.order-detail-row span { color: var(--text-secondary); }
+.order-detail-row strong { font-weight: 700; color: var(--text); text-align: right; max-width: 60%; word-break: break-all; }
+
+.status-badge { color: var(--success); }
+
+.petpooja-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: rgba(255,87,34,0.06);
+  border: 1px solid rgba(255,87,34,0.15);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.petpooja-notice span { font-size: 1.25rem; }
+.petpooja-notice strong { color: var(--primary); }
+
+.back-home-btn { width: 100%; font-size: 1.05rem; }

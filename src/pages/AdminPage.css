@@ -1,0 +1,109 @@
+.admin-page {
+  display: flex;
+  min-height: calc(100vh - 68px);
+  background: var(--surface-3);
+}
+
+.admin-sidebar {
+  width: 250px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar h2 { font-size: 1.15rem; font-weight: 800; color: var(--text); margin-bottom: 2rem; padding-left: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.admin-nav { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.admin-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.admin-tab:hover { background: var(--surface-2); color: var(--text); }
+.admin-tab.active { background: linear-gradient(135deg, rgba(255,87,34,0.1), rgba(255,87,34,0.05)); color: var(--primary); font-weight: 700; }
+
+.admin-content {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
+}
+
+.admin-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 2rem; color: var(--text); }
+
+.admin-loading { display: flex; align-items: center; justify-content: center; height: 300px; }
+.spinner.dark { border-color: rgba(0,0,0,0.1); border-top-color: var(--primary); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+
+.stat-card {
+  background: var(--surface);
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::after {
+  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--primary), #ff8a65);
+}
+
+.stat-card h3 { font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-value { font-size: 2.25rem; font-weight: 800; color: var(--text); }
+.text-primary { color: var(--primary); }
+
+.add-item-card { padding: 1.5rem; margin-bottom: 2rem; }
+.add-item-card h3 { margin-bottom: 1rem; font-size: 1.1rem; }
+
+.add-item-form { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; align-items: end; }
+.full-width { grid-column: 1 / -2; }
+
+.menu-list, .orders-list { padding: 1.5rem; }
+.menu-list h3, .orders-list h3 { margin-bottom: 1.25rem; font-size: 1.1rem; }
+
+.table-wrapper { overflow-x: auto; }
+.admin-table { width: 100%; border-collapse: collapse; text-align: left; }
+.admin-table th { padding: 1rem; border-bottom: 2px solid var(--border); font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; white-space: nowrap; }
+.admin-table td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; vertical-align: middle; }
+.admin-table tr:hover td { background: var(--surface-2); }
+
+.del-btn { background: #fee2e2; color: #ef4444; border: none; padding: 0.4rem; border-radius: var(--radius-sm); cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; }
+.del-btn:hover { background: #fecaca; transform: scale(1.05); }
+
+.badge { display: inline-flex; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; width: auto; height: auto; }
+.category-badge { background: var(--surface-3); color: var(--text-secondary); }
+.success-badge { background: #dcfce7; color: #166534; }
+
+.font-bold { font-weight: 700; }
+.font-mono { font-family: monospace; }
+.text-sm { font-size: 0.85rem; }
+.text-center { text-align: center; }
+.py-4 { padding: 1.5rem 0; }
+
+@media (max-width: 900px) {
+  .admin-page { flex-direction: column; }
+  .admin-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 1rem; }
+  .admin-nav { flex-direction: row; overflow-x: auto; padding-bottom: 0.5rem; }
+  .admin-sidebar h2 { display: none; }
+  .admin-content { padding: 1.5rem; }
+  .add-item-form { grid-template-columns: 1fr; }
+  .full-width { grid-column: auto; }
+}

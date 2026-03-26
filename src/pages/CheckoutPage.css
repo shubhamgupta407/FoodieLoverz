@@ -1,0 +1,95 @@
+.checkout-page { min-height: 100vh; padding-bottom: 4rem; }
+
+.checkout-container { padding: 2rem 1.5rem; }
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1.25rem;
+  transition: color 0.2s;
+}
+.back-btn:hover { color: var(--primary); }
+
+.page-title { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.75rem; }
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.checkout-items {
+  padding: 1.5rem;
+}
+
+.checkout-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.checkout-card-header h2 { font-size: 1.1rem; font-weight: 700; }
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.checkout-item:last-child { border-bottom: none; }
+
+.checkout-item img {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.checkout-item-info { flex: 1; }
+.checkout-item-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+.checkout-item-qty { font-size: 0.82rem; color: var(--text-secondary); }
+
+.checkout-item-price { font-weight: 800; font-size: 1rem; color: var(--primary); white-space: nowrap; }
+
+.checkout-summary-col { display: flex; flex-direction: column; gap: 1rem; }
+
+.checkout-outlet {
+  padding: 1.25rem 1.5rem;
+}
+
+.outlet-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.375rem; }
+.outlet-value { font-size: 1rem; font-weight: 700; color: var(--text); }
+.outlet-addr { font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.2rem; }
+
+.checkout-total {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkout-total h2 { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem; }
+
+.bill-row { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); }
+.bill-row.grand { font-size: 1.1rem; font-weight: 800; color: var(--text); }
+.bill-divider { border-top: 1px dashed var(--border); margin: 0.25rem 0; }
+
+.continue-btn { width: 100%; margin-top: 0.5rem; }
+
+@media (max-width: 768px) {
+  .checkout-grid { grid-template-columns: 1fr; }
+}

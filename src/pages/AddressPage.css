@@ -1,0 +1,38 @@
+.address-page { min-height: 100vh; padding-bottom: 4rem; background: var(--surface-2); }
+.address-container { max-width: 700px; padding: 2rem 1.5rem; }
+
+.page-subtitle { color: var(--text-secondary); margin-bottom: 2rem; }
+
+.address-card { padding: 2rem; }
+
+.address-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.25rem;
+}
+
+.form-group.full-width { grid-column: 1 / -1; }
+
+.input-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.875rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon { padding-left: 2.75rem !important; }
+
+.save-btn { margin-top: 1.5rem; width: 100%; font-size: 1.05rem; }
+
+@media (max-width: 600px) {
+  .address-grid { grid-template-columns: 1fr; }
+  .form-group.full-width { grid-column: auto; }
+}
