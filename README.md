@@ -1,16 +1,64 @@
-# React + Vite
+# FoodieLoverz 🍕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack food delivery web application — built as a client project for a UAE-based restaurant business.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [foodieloverz.netlify.app](https://foodieloverz.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### What this actually is
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Not a tutorial clone. This is a production-ready food delivery platform with end-to-end ordering flow, built from scratch for a real client. Think Swiggy — but custom-built for an independent restaurant chain.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Features
+
+**Customer side**
+- Multi-outlet browsing with location selection
+- Menu with category filters (Pizza, Burgers, Beverages, Combos) and search
+- Cart with item customization, quantity control, delivery fee calculation
+- Checkout with saved delivery addresses and coupon support
+- Real-time order tracking with live map (Leaflet.js) and delivery partner info
+- Payment confirmation flow
+
+**Admin side**
+- Dashboard with total orders, revenue, active users, menu item count
+- 7-day revenue trend chart
+- Order management panel
+- Menu management (add/edit items)
+- Coupon management
+
+**Auth & UX**
+- User authentication with persistent sessions
+- Responsive dark UI with branded design system
+- Contactless delivery option
+
+---
+
+### Built with
+
+<p>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Leaflet.js-199900?style=flat&logo=leaflet&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=netlify&logoColor=white"/>
+</p>
+
+---
+
+### Screenshots
+
+| Landing | Menu | Order Tracking |
+|--------|------|---------------|
+| ![Landing](screenshots/landing.png) | ![Menu](screenshots/menu.png) | ![Tracking](screenshots/tracking.png) |
+
+| Cart | Admin Dashboard |
+|------|----------------|
+| ![Cart](screenshots/cart.png) | ![Admin](screenshots/admin.png) |
+
+---
+
+> Built for Lacony Restaurant, UAE · Client project · 2026
